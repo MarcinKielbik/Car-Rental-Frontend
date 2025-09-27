@@ -1,1 +1,11 @@
-<p>signup works!</p>
+<div class="register-container">
+  <h2>Rejestracja</h2>
+  <form (ngSubmit)="register()">
+    <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="Imię" required />
+    <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Nazwisko" required />
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Hasło" required />
+    <button type="submit">Zarejestruj</button>
+  </form>
+  <p>{{ message }}</p>
+</div>
