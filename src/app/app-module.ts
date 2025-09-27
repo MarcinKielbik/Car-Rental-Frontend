@@ -3,24 +3,26 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Navbar } from './components/navbar/navbar';
-import { Login } from './components/login/login';
-import { Signup } from './components/signup/signup';
-import { DashboardAdmin } from './components/dashboard-admin/dashboard-admin';
-import { DashboardUser } from './components/dashboard-user/dashboard-user';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+import { DashboardUserComponent } from './components/dashboard-user/dashboard-user.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     App,
-    Navbar,
-    Login,
-    Signup,
-    DashboardAdmin,
-    DashboardUser
+    NavbarComponent,
+    DashboardAdminComponent,
+    DashboardUserComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

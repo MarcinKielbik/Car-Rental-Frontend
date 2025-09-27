@@ -1,0 +1,24 @@
+<p>dashboard-admin works!</p>
+<h2>Panel administratora - wszystkie wypożyczenia</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>User</th>
+    <th>Car</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Status</th>
+    <th>Akcje</th>
+  </tr>
+  <tr *ngFor="let rental of rentals">
+    <td>{{ rental.id }}</td>
+    <td>{{ rental.userId }}</td>
+    <td>{{ rental.carId }}</td>
+    <td>{{ rental.startDate }}</td>
+    <td>{{ rental.endDate }}</td>
+    <td>{{ rental.status }}</td>
+    <td>
+      <button (click)="deleteRental(rental.id)">Usuń</button>
+    </td>
+  </tr>
+</table>
