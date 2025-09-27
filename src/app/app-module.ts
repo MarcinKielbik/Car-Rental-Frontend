@@ -4,17 +4,19 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Navbar } from './components/navbar/navbar';
-import { Dashboard } from './components/dashboard/dashboard';
 import { Login } from './components/login/login';
 import { Signup } from './components/signup/signup';
+import { DashboardAdmin } from './components/dashboard-admin/dashboard-admin';
+import { DashboardUser } from './components/dashboard-user/dashboard-user';
 
 @NgModule({
   declarations: [
     App,
     Navbar,
-    Dashboard,
     Login,
-    Signup
+    Signup,
+    DashboardAdmin,
+    DashboardUser
   ],
   imports: [
     BrowserModule,
